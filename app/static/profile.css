@@ -8,48 +8,62 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .container {
     width: 100%;
     max-width: 600px;
-    height: 100%;
-    max-height: 800px;
+    height: 100vh;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
 }
 
-.content {
-    width: 100%;
-    padding: 10px;
+.profile-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
-    overflow-y: auto;
-    box-sizing: border-box;
+    margin-bottom: 30px;
+    margin-top: 25vh;
 }
 
-.menu-button {
-    width: 80%;
-    padding: 15px;
+.profile-image {
+    font-size: 2em; /* Increase the size of the icon */
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-name {
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+}
+
+.profile-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-button {
+    width: 80%;
+    padding: 12px;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: #ddd;
     color: #333;
     font-size: 16px;
     cursor: pointer;
-    text-align: center; /* Ensure text is horizontally centered */
-    display: flex; /* Add flex display */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .bottom-nav {
@@ -81,53 +95,27 @@ body {
     color: #333;
     font-size: 24px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .nav-icon.active {
-    color: #929BF8;
+    color: #8a2be2;
 }
 
 /* Media Queries for Smaller Devices */
 @media (max-width: 480px) {
-    .menu-button {
-        font-size: 12px;
-        padding: 8px;
-        border-radius: 15px;
+    .profile-button {
+        font-size: 14px;
     }
 
     .nav-icon {
         font-size: 20px;
     }
-
-    .container {
-        padding: 10px;
-    }
 }
 
 /* Media Query for Tablets or Landscape Orientation */
 @media (min-width: 768px) and (orientation: landscape) {
-    .container {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        height: auto;
-    }
-
-    .content {
-        width: 70%;
-        padding: 10px;
-    }
-
     .bottom-nav {
-        width: 30%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 20px 0;
-        position: static;
-    }
-
-    .nav-icon {
-        margin-bottom: 15px;
+        position: static; /* Remove fixed positioning for tablets */
     }
 }

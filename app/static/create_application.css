@@ -1,0 +1,296 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fff;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px; /* Для ограничения ширины на больших экранах */
+    height: 100vh; /* 100% высоты экрана */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 10px 0;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #d9d9d9; /* Фиолетовый цвет для активной кнопки */
+    color: #747474;
+    cursor: pointer;
+}
+
+.filter-buttons button.active {
+    background-color: #929BF8;
+    color: #fff /* Более темный фиолетовый для активной кнопки */
+}
+
+.content {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.form-section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-section h2 {
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.type-button,
+.data-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ddd;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.type-button.active {
+    background-color: #929BF8;
+    color: #fff;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    resize: none;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    justify-content: flex-end; /* Выравнивание по правой стороне */
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: relative;
+    top: auto;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #929BF8;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.action-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cancel-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f47676;
+    color: #fff;
+    cursor: pointer;
+}
+
+.save-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #929BF8;
+    color: #fff;
+    cursor: pointer;
+}
+
+.bottom-nav {
+    width: 100%;
+    background-color: #ddd;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-icon {
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-icon.active {
+    color: #8a2be2;
+}
+
+/* Media Queries for Smaller Devices */
+@media (max-width: 480px) {
+    .filter-buttons button {
+        font-size: 10px;
+    }
+
+    .type-button,
+    .data-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .action-buttons button {
+        font-size: 12px;
+    }
+
+    .nav-icon {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Media Query for Tablets or Landscape Orientation */
+@media (min-width: 768px) and (orientation: landscape) {
+    .container {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .content {
+        width: 70%;
+        padding: 10px;
+    }
+
+    .bottom-nav {
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px 0;
+        position: static;
+    }
+
+    .nav-icon {
+        margin-bottom: 15px;
+    }
+}

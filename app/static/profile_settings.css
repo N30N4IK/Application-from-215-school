@@ -1,0 +1,54 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #ddd;
+    color: #000;
+    text-align: left;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #ccc;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+

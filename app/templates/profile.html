@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="/static/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-image">
+                <i class="fa fa-user-circle fa-5x"></i>
+            </div>
+            <div class="profile-name">ФИО</div>
+        </div>
+
+        <div class="profile-buttons">
+            <button class="profile-button" oclick="windows.location.href='127.0.0.1:8000/profile/settings'">Настройки</button>
+            <button class="profile-button">Выйти</button>
+        </div>
+
+        <nav class="bottom-nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="#" class="nav-icon" aria-label="Home" data-page="home">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-icon" aria-label="Tasks" data-page="tasks">
+                        <i class="fa fa-list"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-icon" aria-label="Clipboard" data-page="clipboard">
+                        <i class="fa fa-clipboard"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-icon active" aria-label="Profile" data-page="profile">
+                        <i class="fa fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script src="/static/js/profile_script.js"></script>
+</body>
+</html>
