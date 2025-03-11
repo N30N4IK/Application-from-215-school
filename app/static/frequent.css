@@ -1,0 +1,120 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 400px; /* Максимальная ширина для имитации экрана телефона */
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Верхняя часть экрана */
+.header {
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Для позиционирования псевдоэлемента "notch" */
+}
+
+
+.header h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.create-button {
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-button:hover {
+    background-color: #7a6cfa;
+}
+
+/* Список вопросов */
+.faq-list {
+    padding: 20px;
+}
+
+.faq-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+
+.faq-item p {
+    margin: 0;
+}
+
+.expand-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.expand-button:hover {
+    color: #333;
+}
+
+/* Нижняя навигация */
+
+.bottom-nav {
+    width: 100%;
+    background-color: #ddd;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-icon {
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav-icon.active {
+    color: #929BF8;
+    font-size: 24px;
+}

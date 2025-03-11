@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="/static/frequent.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Часто задаваемые вопросы</h1>
+            <button class="create-button">Создать</button>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="faq-list">
+            <div class="faq-item">
+                <p>К какому типу относится ремонт форточки?</p>
+                <button class="expand-button">+</button>
+            </div>
+            <div class="faq-item">
+                <p>Что делать, если не работает электронная доска?</p>
+                <button class="expand-button">+</button>
+            </div>
+            <div class="faq-item">
+                <p>Сколько времени надо ждать специалиста?</p>
+                <button class="expand-button">+</button>
+            </div>
+            <div class="faq-item">
+                <p>Сколько раз можно повторно оформлять одну заявку?</p>
+                <button class="expand-button">+</button>
+            </div>
+            <div class="faq-item">
+                <p>Можно отменить уже созданную заявку?</p>
+                <button class="expand-button">+</button>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="#" class="nav-icon" data-page="home">
+                <i class="fa fa-home"></i>
+            </a>
+            <a href="#" class="nav-icon" data-page="myapplication">
+                <i class="fa fa-list"></i>
+            </a>
+            <a href="#" class="nav-icon-active" data-page="frequent">
+                <i class="fa fa-clipboard"></i>
+            </a>
+            <a href="#" class="nav-icon" data-page="profile">
+                <i class="fa fa-user"></i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

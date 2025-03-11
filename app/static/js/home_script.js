@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = '/reviews';
             break;
           case 'faq':
-            window.location.href = '/faq';
+            window.location.href = '/frequent';
             break;
           default:
             console.warn('Unknown page:', page);
@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
           case 'myapplication':
             window.location.href = '/myapplication';
             break;
-          case 'allapplication':
-            window.location.href = '/allapplication';
+          case 'frequent':
+            window.location.href = '/frequent';
             break;
           case 'profile':
             window.location.href = '../profile';
