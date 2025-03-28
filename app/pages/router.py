@@ -26,7 +26,7 @@ async def profile(request: Request):
 
 @router.get('/profile/settings')
 async def progile_sett(request: Request):
-     return templates.TemplateResponse('progile_settings.html', {"request": request})
+     return templates.TemplateResponse('profile_settings.html', {"request": request})
 
 @router.get('/frequent')
 async def frequent(request: Request):

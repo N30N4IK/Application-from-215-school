@@ -239,7 +239,7 @@ textarea {
 }
 
 .nav-icon.active {
-    color: #8a2be2;
+    color: #929BF8;
 }
 
 /* Media Queries for Smaller Devices */
@@ -259,7 +259,7 @@ textarea {
     }
 
     .nav-icon {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .container {
