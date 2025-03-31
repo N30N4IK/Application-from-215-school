@@ -27,8 +27,8 @@ body {
 }
 
 .header {
-    width: 100%;
-    text-align: center;
+    width: 90%;
+    text-align: start;
     margin-bottom: 20px;
 }
 
@@ -36,15 +36,14 @@ body {
     margin-bottom: 10px;
 }
 
-.filter-buttons {    
+.filter-buttons {
     font-size: 16px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: left;
 }
 
 .filter-buttons button {
-
     padding: 8px 12px;
     border: none;
     border-radius: 20px;
@@ -52,6 +51,7 @@ body {
     color: #333;
     cursor: pointer;
     font-size: 16px;
+    margin-right: 10px;
 }
 
 .content {
@@ -66,11 +66,11 @@ body {
 }
 
 .ticket {
-    width: 80%;
+    width: 96%;
     background-color: #d9d9d9; /* Light grey for the ticket background */
     border-radius: 15px;
     padding: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     box-sizing: border-box;
 }
 
@@ -89,7 +89,12 @@ body {
 }
 
 .ticket-description {
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: #979797;
     font-size: 16px;
+    text-align: center;
+    
 }
 
 .bottom-nav {
@@ -130,17 +135,17 @@ body {
 /* Media Queries for Smaller Devices */
 @media (max-width: 480px) {
     .filter-buttons button {
-        font-size: 10px; /* Adjust filter button font size */
+        font-size: 18px; /* Adjust filter button font size */
     }
 
     .menu-button {
-        font-size: 12px;
-        padding: 8px;
+        font-size: 16px;
+        padding: 10px;
         border-radius: 15px;
     }
 
     .nav-icon {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .container {

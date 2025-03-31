@@ -99,17 +99,17 @@ body {
 }
 
 .nav-icon.active {
-    color: #8a2be2;
+    color: #929BF8;
 }
 
 /* Media Queries for Smaller Devices */
 @media (max-width: 480px) {
     .profile-button {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .nav-icon {
-        font-size: 20px;
+        font-size: 30px;
     }
 }
 

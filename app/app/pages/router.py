@@ -31,4 +31,8 @@ async def progile_sett(request: Request):
 @router.get('/frequent')
 async def frequent(request: Request):
      return templates.TemplateResponse('frequent.html', {"request": request})
+
+@router.get('/myapplication/filter')
+async def filters(request: Request):
+     return templates.TemplateResponse('application_filter.html', {"request": request})
      

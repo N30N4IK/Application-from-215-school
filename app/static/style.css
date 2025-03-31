@@ -38,18 +38,19 @@ body {
 
 .menu-button {
     width: 80%;
-    padding: 15px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 16px;
     border: none;
     border-radius: 20px;
     background-color: #ddd;
     color: #333;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     text-align: center; /* Ensure text is horizontally centered */
     display: flex; /* Add flex display */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
+    transition: all 0.5s ease;
 }
 
 .bottom-nav {
@@ -84,19 +85,19 @@ body {
 }
 
 .nav-icon.active {
-    color: #929BF8;
+    color: #929bf8;
 }
 
 /* Media Queries for Smaller Devices */
 @media (max-width: 480px) {
     .menu-button {
-        font-size: 12px;
-        padding: 8px;
+        font-size: 16px;
+        padding: 10px;
         border-radius: 15px;
     }
 
     .nav-icon {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .container {

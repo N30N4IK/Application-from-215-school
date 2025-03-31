@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать заявку</title>
+    <link rel="stylesheet" href="/static/crt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app-container">
+       <div class="header">
+            <h1 class="title">Заявки</h1>
+        </div>
+        <!-- Кнопки фильтра, создать, чаты -->
+        <div class="filter-buttons">
+            <button class="filter-button">Фильтр</button>
+            <button class="filter-button create-button">Создать</button>
+            <button class="filter-button">Чаты</button>
+        </div>
+
+        <!-- Тип заявки -->
+        <div class="request-type">
+            <h2>Тип заявки</h2>
+            <div>
+                <button class="type-button">Технический ремонт</button>
+                <button class="type-button">Мелкий ремонт</button>
+            </div>
+            <div>
+                <button class="type-button">Частые заявки</button>
+                <button class="type-button type-button active-button">Другое</button>
+            </div>
+        </div>
+
+        <!-- Описание ремонта -->
+        <div class="repair-description">
+            <h2>Описание ремонта</h2>
+            <textarea class="description-box" placeholder="Перегорела лампа, освещение слабое. Требуется замена."></textarea>
+        </div>
+
+        <!-- Срочность -->
+        <div class="urgency">
+            <h2>Срочность</h2>
+            <input type="checkbox" id="urgencyCheckbox">
+        </div>
+
+        <!-- Данные -->
+        <div class="data">
+            <h2>Данные</h2>
+             <div class="data-inputs">
+                <input type="text" class="data-input" placeholder="Кабинет 3005">
+                <input type="text" class="data-input" placeholder="Первая смена">
+            </div>
+        </div>
+
+        <!-- Кнопки отмена и сохранить -->
+        <div class="action-buttons">
+            <button class="cancel-button">Отмена</button>
+            <button class="save-button">Сохранить</button>
+        </div>
+
+        <nav class="bottom-nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="#" class="nav-icon" aria-label="Home" data-page="home">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-icon active" aria-label="Myapplication" data-page="myapplication">
+                        <i class="fa fa-list"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-icon" aria-label="Frequent" data-page="frequent">
+                        <i class="fa fa-clipboard"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-icon" aria-label="Profile" data-page="profile">
+                        <i class="fa fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script src="/static/js/create_application.js"></script>
+</body>
+</html>

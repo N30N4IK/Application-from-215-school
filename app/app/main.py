@@ -5,7 +5,7 @@ from pages.router import router as pages_router
 
 
 app = FastAPI()
-app.mount('/static', StaticFiles(directory='static'), name='static')
+app.mount('/static', StaticFiles(directory='../static'), name='static')
 app.include_router(pages_router)
 
 

@@ -31,23 +31,28 @@ body {
 }
 
 .header h1 {
+    font-size: 2em;
     margin: 10px 0;
+    text-align: left;
 }
 
 .filter-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    padding: 0 20px;
     align-items: center;
     margin-bottom: 20px;
 }
 
 .filter-buttons button {
-    padding: 10px 15px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
+    margin-right: 10px;
     background-color: #d9d9d9; /* Фиолетовый цвет для активной кнопки */
     color: #747474;
     cursor: pointer;
+    font-size: 1em;
 }
 
 .filter-buttons button.active {
@@ -84,13 +89,15 @@ body {
 
 .type-button,
 .data-button {
-    padding: 10px 15px;
+    padding: 10px 20px;
     border: none;
     border-radius: 20px;
     background-color: #ddd;
     color: #333;
     cursor: pointer;
     margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 1em;
 }
 
 .type-button.active {
@@ -239,7 +246,7 @@ textarea {
 }
 
 .nav-icon.active {
-    color: #8a2be2;
+    color: #929BF8;
 }
 
 /* Media Queries for Smaller Devices */
@@ -259,7 +266,7 @@ textarea {
     }
 
     .nav-icon {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .container {

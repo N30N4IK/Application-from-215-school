@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.location.href = '../';
                 break;
               case 'tasks':
-                window.location.href = 'tasks.html';
+                window.location.href = '../myapplication';
                 break;
-              case 'clipboard':
-                window.location.href = 'clipboard.html';
+              case 'frequent':
+                window.location.href = '../frequent';
                 break;
               case 'profile':
                 window.location.href = '../profile';

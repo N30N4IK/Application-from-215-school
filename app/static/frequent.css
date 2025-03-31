@@ -9,7 +9,6 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-
     align-items: center;
 }
 
@@ -46,7 +45,7 @@ body {
 }
 
 .create-button:hover {
-    background-color: #7a6cfa;
+    background-color: #929BF8;
 }
 
 /* Список вопросов */
@@ -116,5 +115,28 @@ body {
 
 .nav-icon.active {
     color: #929BF8;
-    font-size: 24px;
+}
+
+@media (max-width: 480px) {
+    .nav-icon {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+    .app-container {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .content {
+        width: 70%;
+        padding: 10px;
+    }
+
+    .nav-icon {
+        margin-bottom: 15px;
+    }
 }

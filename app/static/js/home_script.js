@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.warn('Unknown page:', page);
         }
       });
-      });
+    });
 
   const navIcons = document.querySelectorAll('.nav-icon');
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         switch (page) {
           case 'home':
-            window.location.href = '/home';
+            window.location.href = '/';
             break;
           case 'myapplication':
             window.location.href = '/myapplication';
