@@ -9,22 +9,23 @@ body {
 .container {
     max-width: 400px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 30px;
 }
 
 h1 {
     text-align: left;
     margin-bottom: 30px;
+    right: 10px; 
 }
 
 .button {
     display: block;
     width: 100%;
     padding: 10px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: #ddd;
     color: #000;
-    text-align: left;
+    text-align: center;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -46,9 +47,24 @@ h1 {
     padding: 10px 0;
 }
 
-.bottom-nav a {
+.nav-icon {
+    color: #333;
+    font-size: 30px;
     text-decoration: none;
-    color: #000;
-    font-size: 20px;
 }
 
+.nav-icon.active {
+    color: #929BF8
+}
+
+/* Media Queries for Smaller Devices */
+@media (max-width: 480px) {
+
+    .nav-icon {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}

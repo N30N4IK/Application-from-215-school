@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function(){
              case 'home':
                window.location.href = '../';
                break;
-             case 'tasks':
+             case 'myapplication':
                window.location.href = '../myapplication';
                break;
-             case 'clipboard':
+             case 'frequent':
                window.location.href = '../frequent';
                break;
              case 'profile':
