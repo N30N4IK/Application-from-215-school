@@ -52,6 +52,10 @@ async def home(request: Request, user: dict = Depends(get_user)):
 async def myapplication(request: Request, user: dict = Depends(get_user)):
     return templates.TemplateResponse('myapplication.html', {'request': request, "user": user})
 
+@router.get('/application', response_class=HTMLResponse)
+async def application(request: Request, user: dict = Depends(get_user)):
+    return templates.TemplateResponse('application.html', {'request': request, "user": user})
+
 @router.get('/myapplication/create', response_class=HTMLResponse)
 async def create(request: Request, user: dict = Depends(get_user)):
     return templates.TemplateResponse('create_application.html', {'request': request, "user": user})
@@ -162,7 +166,7 @@ async def login(request: Request, db: AsyncSession = Depends(get_db)):
     
     response = RedirectResponse("../", status_code=status.HTTP_302_FOUND) # перенаправляем на / (При успешной валидации/верификации)
 
-    role_cookie_name = "user_role"  # Имя cookie для роли
+    role_cookie_name = "username"  # Имя cookie для роли
     response.set_cookie(key=role_cookie_name, value=user.role, httponly=True)  # user.role является значением в таблице базы данных, и значение из ... значения будет таким
 
     return response # Переадресация на другой url 

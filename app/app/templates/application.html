@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои заявки</title>
+    <link rel="stylesheet" href="/static/myappl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+                <div class="container">
+                    <header class="header">
+                        <h1>Взятые заявки</h1>
+                        <div class="filter-buttons">
+                            <button data-page="filter">Фильтр</button>
+                            <button data-page="frequent">Чаты</button>
+                        </div>
+                    </header>
+
+                    <div class="content">
+                        <div class="ticket">
+                            <div class="ticket-header">
+                                <span class="category">Другое</span>
+                            </div>
+                            <div class="ticket-description">Не работает электронный дневник</div>
+                        </div>
+
+                        <div class="ticket">
+                            <div class="ticket-header">
+                                <span class="category">Мелкий ремонт</span>
+                            </div>
+                            <div class="ticket-description">Сломалась ручка окна</div>
+                        </div>
+
+                        <div class="ticket">
+                            <div class="ticket-header">
+                                <span class="category">Мелкий ремонт</span>
+                            </div>
+                            <div class="ticket-description">Сломалась дверь</div>
+                        </div>
+
+                        <div class="ticket">
+                            <div class="ticket-header">
+                                <span class="category">Электрика</span>
+                            </div>
+                            <div class="ticket-description">Не работает электронная доска</div>
+                        </div>
+                    </div>
+                    <nav class="bottom-nav">
+                        <ul class="nav-list">
+                            <li>
+                                <a href="../" class="nav-icon" aria-label="Home" data-page="home">
+                                    <i class="fa fa-home"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-icon active" aria-label="Myapplication" data-page="myapplication">
+                                    <i class="fa fa-list"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reviews" class="nav-icon" aria-label="Frequent" data-page="frequent">
+                                    <i class="fa fa-clipboard"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../profile" class="nav-icon" aria-label="Profile" data-page="profile">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+    </div>
+    <script src="../static/js/transition.js"></script>
+    <script src="static/js/myapplication_script.js"></script>
+</body>
+</html>

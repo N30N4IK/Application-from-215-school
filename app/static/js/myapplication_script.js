@@ -46,6 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
               case 'profile':
                 window.location.href = '../profile';
                 break;
+              case 'application':
+                window.location.href = '../application';
+                break;
               default:
               console.warn('Unknown page:', page);
         }
