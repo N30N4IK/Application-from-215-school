@@ -1,0 +1,159 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px; /* Limit width on larger screens */
+    flex: 1;
+    padding: 20px; /* Add some padding around content */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+.header {
+    font-size: 1.2em;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.dark-box {
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: #979797;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.review-item {
+    background-color: #E9E9E9; /* Match background color */
+    border-radius: 15px; /* Match border radius */
+    margin-bottom: 15px;
+    padding: 15px; /* Match padding */
+    box-sizing: border-box;  /* Important to prevent padding from overflowing */
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px; /* Adjust spacing */
+}
+
+.reviewer-name {
+    font-weight: bold;
+    font-size: 1em; /* Adjust font size */
+    color: #212121;  /* Match name color */
+}
+
+.reply-button {
+    background-color: #A690F7; /* Correct color */
+    border: none;
+    color: white;
+    padding: 8px 14px; /* Adjust padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em; /* Adjust font size */
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.review-text {
+    color: #424242; /* Correct text color */
+    font-size: 1.1em;  /* Adjust font size */
+    line-height: 1.4; /* improve readability */
+}
+.review-reply {
+    text-align: left;
+    color: #424242; /* Correct text color */
+    font-size: 1.1em;  /* Adjust font size */
+    line-height: 1.4; /* improve readability */
+}
+
+.bottom-nav {
+    width: 100%;
+    background-color: #ddd;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-icon {
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav-icon.active {
+    color: #929BF8;
+}
+
+/* Media Queries for Smaller Devices */
+@media (max-width: 480px) {
+
+    .nav-icon {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Media Query for Tablets or Landscape Orientation */
+@media (min-width: 768px) and (orientation: landscape) {
+    .container {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .content {
+        width: 70%;
+        padding: 10px;
+    }
+
+    .bottom-nav {
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px 0;
+        position: static;
+    }
+
+    .nav-icon {
+        margin-bottom: 15px;
+    }
+}

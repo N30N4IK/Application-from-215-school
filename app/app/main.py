@@ -37,5 +37,5 @@ async def allapplication():
     return {'data': 'ok'}
 
 @app.get('/profile')
-async def profgile():
+async def profile():
     return {'data': 'ok'}

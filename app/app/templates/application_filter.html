@@ -5,56 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фильтр</title>
     <link rel="stylesheet" href="/static/application_filter.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    <div class="app-container">
-        <!-- Header -->
-        <div class="header">
-            <h1>Фильтр</h1>
-            <div class="action-buttons">
-            <button class="cancel-button">Отмена</button>
-            <button class="save-button">Сохранить</button>
+    {% if user.role == 'user' %} 
+        <div class="app-container">
+            <!-- Header -->
+            <div class="header">
+                <h1>Фильтр</h1>
+                <div class="action-buttons">
+                <button class="cancel-button" onclick="window.location.href='../myapplication'">Отмена</button>
+                <button class="save-button" onclick="window.location.href='../myapplication'">Сохранить</button>
+                </div>
             </div>
-        </div>
 
-        <!-- Date and Time -->
-        <div class="section">
-            <h2>Дата и время</h2>
-            <input type="text" class="date-input" placeholder="дд.мм.гггг">
-        </div>
+            <!-- Date and Time -->
+            <div class="section">
+                <h2>Дата и время</h2>
+                <input type="text" class="date-input" placeholder="дд.мм.гггг">
+            </div>
 
-        <!-- Status of request -->
-        <div class="section">
-            <h2>Статус заявки</h2>
-            <button class="status-button active-button">Выполненные заявки</button>
-            <button class="status-button">Текущие заявки</button>
-        </div>
+            <!-- Status of request -->
+            <div class="section">
+                <h2>Статус заявки</h2>
+                <button class="status-button active-button">Выполненные заявки</button>
+                <button class="status-button">Текущие заявки</button>
+            </div>
 
-        <!-- Direction -->
-        <div class="section">
-            <h2>Направление</h2>
-            <button class="direction-button">Технический ремонт</button>
-            <button class="direction-button">Мелкий ремонт</button>
-            <button class="direction-button">Электрика</button>
-            <button class="direction-button">Другое</button>
-        </div>
+            <!-- Direction -->
+            <div class="section">
+                <h2>Направление</h2>
+                <button class="direction-button">Технический ремонт</button>
+                <button class="direction-button">Мелкий ремонт</button>
+                <button class="direction-button">Электрика</button>
+                <button class="direction-button">Другое</button>
+            </div>
+            <div class="bottom-nav">
+                <a href="../" class="nav-icon" data-page="home">
+                    <i class="fa fa-home"></i>
+                </a>
+                <a href="../myapplication" class="nav-icon active" data-page="myapplication">
+                    <i class="fa fa-list"></i>
+                </a>
+                <a href="../frequent" class="nav-icon" data-page="frequent">
+                    <i class="fa fa-clipboard"></i>
+                </a>
+                <a href="../profile" class="nav-icon" data-page="profile">
+                    <i class="fa fa-user"></i>
+                </a>
+            </div>
+    {% elif user.role == 'admin' %}
+            <div class="app-container">
+                <!-- Header -->
+                <div class="header">
+                    <h1>Фильтр</h1>
+                    <div class="action-buttons">
+                    <button class="cancel-button">Отмена</button>
+                    <button class="save-button">Сохранить</button>
+                    </div>
+                </div>
 
+                <!-- Date and Time -->
+                <div class="section">
+                    <h2>Дата и время</h2>
+                    <input type="text" class="date-input" placeholder="дд.мм.гггг">
+                </div>
+
+                <!-- Status of request -->
+                <div class="section">
+                    <h2>Статус заявки</h2>
+                    <button class="status-button active-button">Выполненные заявки</button>
+                    <button class="status-button">Текущие заявки</button>
+                </div>
+
+                <!-- Direction -->
+                <div class="section">
+                    <h2>Направление</h2>
+                    <button class="direction-button">Технический ремонт</button>
+                    <button class="direction-button">Мелкий ремонт</button>
+                    <button class="direction-button">Электрика</button>
+                    <button class="direction-button">Другое</button>
+                </div>
+                <div class="urgency">
+                    <h2>Срочность</h2>
+                    <label>
+                        <input type="checkbox" class="urgencyCheckbox">
+                    </label>
+                </div>
+                <div class="bottom-nav">
+                    <a href="../" class="nav-icon" data-page="home">
+                        <i class="fa fa-home"></i>
+                    </a>
+                    <a href="../myapplication" class="nav-icon active" data-page="myapplication">
+                        <i class="fa fa-list"></i>
+                    </a>
+                    <a href="../frequent" class="nav-icon" data-page="frequent">
+                        <i class="fa fa-clipboard"></i>
+                    </a>
+                    <a href="../profile" class="nav-icon" data-page="profile">
+                        <i class="fa fa-user"></i>
+                    </a>
+                </div>
+        {% elif user.role == 'tech' %} 
+            <div class="app-container">
+                <!-- Header -->
+                <div class="header">
+                    <h1>Фильтр</h1>
+                    <div class="action-buttons">
+                    <button class="cancel-button" onclick="window.location.href='../'">Отмена</button>
+                    <button class="save-button">Сохранить</button>
+                    </div>
+                </div>
+
+                <!-- Date and Time -->
+                <div class="section">
+                    <h2>Дата и время</h2>
+                    <input type="text" class="date-input" placeholder="дд.мм.гггг">
+                </div>
+
+                <!-- Status of request -->
+                <div class="section">
+                    <h2>Статус заявки</h2>
+                    <button class="status-button active-button">Выполненные заявки</button>
+                    <button class="status-button">Текущие заявки</button>
+                </div>
+
+                <!-- Direction -->
+                <div class="section">
+                    <h2>Направление</h2>
+                    <button class="direction-button">Технический ремонт</button>
+                    <button class="direction-button">Мелкий ремонт</button>
+                    <button class="direction-button">Электрика</button>
+                    <button class="direction-button">Другое</button>
+                </div>
+                <div class="urgency">
+                    <h2>Срочность</h2>
+                    <label>
+                        <input type="checkbox" class="urgencyCheckbox">
+                    </label>
+                </div>
+            </div>
+            <div class="bottom-nav">
+                <a href="../" class="nav-icon active" data-page="home">
+                    <i class="fa fa-home"></i>
+                </a>
+                <a href="../myapplication" class="nav-icon" data-page="myapplication">
+                    <i class="fa fa-list"></i>
+                </a>
+                <a href="../frequent" class="nav-icon" data-page="frequent">
+                    <i class="fa fa-clipboard"></i>
+                </a>
+                <a href="../profile" class="nav-icon" data-page="profile">
+                    <i class="fa fa-user"></i>
+                </a>
+            </div>
+        {% else %}
+            <button class="menu-button" onclick="window.location.href='../login'">Войдите в аккаунт<p>
+        {% endif %}
         <!-- Bottom Navigation -->
-        <div class="bottom-nav">
-            <a href="#" class="nav-icon" data-page="home">
-                <i class="fa fa-home"></i>
-            </a>
-            <a href="#" class="nav-icon" data-page="myapplication">
-                <i class="fa fa-list"></i>
-            </a>
-            <a href="#" class="nav-icon active" data-page="frequent">
-                <i class="fa fa-clipboard"></i>
-            </a>
-            <a href="#" class="nav-icon" data-page="profile">
-                <i class="fa fa-user"></i>
-            </a>
-        </div>
     </div>
+    <script src="../static/js/application_filter.js"></script>
 </body>
 </html>

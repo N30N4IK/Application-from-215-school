@@ -1,0 +1,166 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Хедер */
+.header {
+    padding: 22px 20px;
+    text-align: left;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.header h1 {
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Форма отзыва */
+.review-form {
+    padding: 20px;
+    flex-grow: 1; /* Контент формы занимает все доступное пространство */
+}
+
+.fio-select {
+    background-color: #D9D9D9;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 28px;
+    font-size: 0.95em;
+    color: #555;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    appearance: none;  /* Убираем стандартную стрелку */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath fill='%23999' d='M0 0l6 7 6-7z'/%3E%3C/svg%3E"); /* Добавляем свою стрелку */
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    transform: translateY(-50%);
+}
+
+.review-text {
+    background-color: #D9D9D9;
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 1em;
+    line-height: 1.4;
+    color: #444;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.review-text::placeholder {
+    color: #444;
+}
+
+/* Кнопки отмены и отправки */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.cancel-button {
+    background-color: #F47676;
+    color: #fff;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 28px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.submit-button {
+    background-color: #929BF8;
+    color: #FFF;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 28px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+
+/* Нижняя навигация */
+
+.bottom-nav {
+    width: 100%;
+    background-color: #ddd;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-icon {
+    color: #333;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.nav-icon.active {
+    color: #929BF8;
+}
+
+/* Media Queries for Smaller Devices */
+@media (max-width: 480px) {
+
+    .nav-icon {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+

@@ -1,47 +1,73 @@
 body {
     font-family: sans-serif;
-    background-color: #fff;
     margin: 0;
-    overflow-x: hidden;
-    display: fixed;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.container {
-    width: 100%;
-    margin: 0 auto;
-    max-Width: 420px;
-    height: 100vh;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-}
-.header {
-    padding: 32px 20px;
-    font-size: 2em;
-    text-align: left;
-    position: relative;
-}
-.button {
-    background-color: #ddd;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border-radius: 20px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    justify-content: center;
+    align-items: center;
+    min-height: 93vh;
+    width: 100vw;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+}
+
+.header {
+    font-size: 2em;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.requests {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-left: -5px;
+}
+
+.requests li {
+    background-color: #ddd;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px;
+    position: relative;
+    top: 350px;
+}
+
+.cancel-button, .select-button {
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background-color: #f08080; /* Светло-красный */
+}
+
+.select-button {
+    background-color: #8774E1; /* Фиолетовый */
+}
+
+/* Нижняя навигация */
 .bottom-nav {
     width: 100%;
     background-color: #ddd;
@@ -71,6 +97,7 @@ body {
     color: #333;
     font-size: 24px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .nav-icon.active {
@@ -116,3 +143,4 @@ body {
         margin-bottom: 15px;
     }
 }
+

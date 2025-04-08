@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/reviews.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>Отзывы</h1>
+        </div>
+
+        <!-- Форма отзыва -->
+        <div class="review-form">
+            <select class="fio-select">
+                <option>Фамилия Имя Отчество</option>
+            </select>
+
+            <textarea class="review-text" placeholder="Спасибо мастеру за оперативное устранение неисправности! Лампы в классе заменены, освещение восстановлено. Всё сделано аккуратно и без лишних задержек."></textarea>
+
+            <div class="action-buttons">
+                <button class="cancel-button" href="../" data-page="cancel">Отмена</button>
+                <button class="submit-button" href="/reviews/complete" data-page="okay">Отправить</button>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="../" class="nav-icon">
+                <i class="fa fa-home"></i>
+            </a>
+            <a href="../myapplication" class="nav-icon">
+                <i class="fa fa-list"></i>
+            </a>
+            <a href="../frequent" class="nav-icon active">
+                <i class="fa fa-clipboard"></i>
+            </a>
+            <a href="../profile" class="nav-icon">
+                <i class="fa fa-user"></i>
+            </a>
+        </div>
+    </div>
+    <script src="../static/js/reviews_create.js"></script>
+</body>
+</html>

@@ -23,22 +23,50 @@ document.addEventListener('DOMContentLoaded', function() {
            }
          });
        });
+
+      const officeInputs = document.querySelectorAll('.data-input');
+
+      officeInputs.forEach(input => {
+          input.addEventListener('input', function (e) {
+            this.value = this.value.slice(0, 4); // Ограничиваем ввод до 4 символов
+          });
+      });
+
+
+       const menuButtons1 = document.querySelectorAll('.cancel-button');
  
-       const menuButtons = document.querySelectorAll('.cancel-button');
- 
-       menuButtons.forEach(button => {
+       menuButtons1.forEach(button => {
            button.addEventListener('click', function(event) {
                event.preventDefault();
 
                const page = this.dataset.page;
+               console.log('Clicked page:', page); // Отладка
 
                switch (page) {
                 case 'cancel':
                   window.location.href = '../myapplication';
-                  break
+                  break;
                }
            });
        });
+
+       const menuButtons2 = document.querySelectorAll('.save-button');
+ 
+       menuButtons2.forEach(button => {
+           button.addEventListener('click', function(event) {
+               event.preventDefault();
+
+               const page = this.dataset.page;
+               console.log('Clicked page:', page); // Отладка
+
+               switch (page) {
+                case 'complete':
+                  window.location.href = '../myapplication/create/complete';
+                  break;
+               }
+           });
+       });
+
  
      const navIcons = document.querySelectorAll('.nav-icon');
  
@@ -67,14 +95,14 @@ document.addEventListener('DOMContentLoaded', function() {
          });
        });
  
-       const dataButtons = document.querySelectorAll('.data-button');
+       const dataButtons = document.querySelectorAll('.type-button');
  
        dataButtons.forEach(button => {
            button.addEventListener('click', function() {
                // Remove active class from all buttons
-               dataButtons.forEach(btn => btn.classList.remove('active'));
+               dataButtons.forEach(btn => btn.classList.remove('active-button'));
                // Add active class to the clicked button
-               this.classList.add('active');
+               this.classList.add('active-button');
            });
        });
  });

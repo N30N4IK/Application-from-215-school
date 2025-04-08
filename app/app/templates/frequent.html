@@ -8,55 +8,152 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="app-container">
-        <!-- Header -->
-        <div class="header">
-            <h1>Часто задаваемые вопросы</h1>
-            <button class="create-button">Создать</button>
-        </div>
+    {% if user.role == 'admin' %}
+        <div class="app-container">
+            <!-- Header -->
+            <div class="header">
+                <h1>Часто</h1>
+                <h1>задаваемые</h1>
+                <h1>вопросы</h1>
+                <button class="create-button">Создать</button>
+            </div>
+            
+            <!-- FAQ List -->
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="question">
+                        <p>К какому типу относится ремонт форточки?</p>
+                        <button class="expand-button">+</button>                    
+                    </div>
+                    <div class="faq-content">
+                        <p>Ремонт форточки относится к категории мелкого ремонта</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="question">
+                        <p>Что делать, если не работает электронная доска?</p>
+                        <button class="expand-button">+</button>                    
+                    </div>
+                    <div class="faq-content">
+                        <p>Попробуйте перегрузить доску и проверить правильность подключения кабеля</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="question">
+                        <p>Сколько времени надо ждать специалиста?</p>
+                        <button class="expand-button">+</button>                    
+                    </div>
+                    <div class="faq-content">
+                        <p>Если заявка не срочная, то от 2 часов, если заявка отмечена срочной, то ожидание займет не более 15 минут</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="question">
+                        <p>Сколько раз можно повторно оформлять одну заявку?</p>
+                        <button class="expand-button">+</button>                    
+                    </div>
+                    <div class="faq-content">
+                        <p>Одну заявку можно повторно оформить без ограничений в количестве ...</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="question">
+                        <p>Можно отменить уже созданную заявку?</p>
+                        <button class="expand-button">+</button>                    
+                    </div>
+                    <div class='faq-content'>
+                        <p>Да, вы можете отменить заявку, обратившись в службу поддержки.</p>
+                    </div>
+                </div>
+            </div>
 
-        <!-- FAQ List -->
-        <div class="faq-list">
-            <div class="faq-item">
-                <p>К какому типу относится ремонт форточки?</p>
-                <button class="expand-button">+</button>
+            <!-- Bottom Navigation -->
+            <div class="bottom-nav">
+                <a href="../" class="nav-icon" data-page="home">
+                    <i class="fa fa-home"></i>
+                </a>
+                <a href="../myapplication" class="nav-icon" data-page="myapplication">
+                    <i class="fa fa-list"></i>
+                </a>
+                <a href="../frequent" class="nav-icon active" data-page="frequent">
+                    <i class="fa fa-clipboard active"></i>
+                </a>
+                <a href="../profile" class="nav-icon" data-page="profile">
+                    <i class="fa fa-user"></i>
+                </a>
             </div>
-            <div class="faq-item">
-                <p>Что делать, если не работает электронная доска?</p>
-                <button class="expand-button">+</button>
-            </div>
-            <div class="faq-item">
-                <p>Сколько времени надо ждать специалиста?</p>
-                <button class="expand-button">+</button>
-            </div>
-            <div class="faq-item">
-                <p>Сколько раз можно повторно оформлять одну заявку?</p>
-                <button class="expand-button">+</button>
-            </div>
-            <div class="faq-item">
-                <p>Можно отменить уже созданную заявку?</p>
-                <button class="expand-button">+</button>
-            </div>
-        </div>
-
-        <!-- Bottom Navigation -->
-        <div class="bottom-nav">
-            <a href="#" class="nav-icon" data-page="home">
-                <i class="fa fa-home"></i>
-            </a>
-            <a href="#" class="nav-icon" data-page="myapplication">
-                <i class="fa fa-list"></i>
-            </a>
-            <a href="#" class="nav-icon active" data-page="frequent">
-                <i class="fa fa-clipboard"></i>
-            </a>
-            <a href="#" class="nav-icon" data-page="profile">
-                <i class="fa fa-user"></i>
-            </a>
-        </div>
+        {% elif user.role == 'user' %}
+            <div class="app-container">
+                <!-- Header -->
+                <div class="header">
+                    <h1>Часто задаваемые вопросы</h1>
+                </div>
+                
+                <!-- FAQ List -->
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="question">
+                            <p>К какому типу относится ремонт форточки?</p>
+                            <button class="expand-button">+</button>                    
+                        </div>
+                        <div class="faq-content">
+                            <p>Ремонт форточки относится к категории мелкого ремонта</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">
+                            <p>Что делать, если не работает электронная доска?</p>
+                            <button class="expand-button">+</button>                    
+                        </div>
+                        <div class="faq-content">
+                            <p>Попробуйте перегрузить доску и проверить правильность подключения кабеля</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">
+                            <p>Сколько времени надо ждать специалиста?</p>
+                            <button class="expand-button">+</button>                    
+                        </div>
+                        <div class="faq-content">
+                            <p>Если заявка не срочная, то от 2 часов, если заявка отмечена срочной, то ожидание займет не более 15 минут</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">
+                            <p>Сколько раз можно повторно оформлять одну заявку?</p>
+                            <button class="expand-button">+</button>                    
+                        </div>
+                        <div class="faq-content">
+                            <p>Одну заявку можно повторно оформить без ограничений в количестве ...</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="question">
+                            <p>Можно отменить уже созданную заявку?</p>
+                            <button class="expand-button">+</button>                    
+                        </div>
+                        <div class='faq-content'>
+                            <p>Да, вы можете отменить заявку, обратившись в службу поддержки.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+                <!-- Bottom Navigation -->
+                <div class="bottom-nav">
+                    <a href="../" class="nav-icon" data-page="home">
+                        <i class="fa fa-home"></i>
+                    </a>
+                    <a href="../myapplication" class="nav-icon" data-page="myapplication">
+                        <i class="fa fa-list"></i>
+                    </a>
+                    <a href="../frequent" class="nav-icon active" data-page="frequent">
+                        <i class="fa fa-clipboard active"></i>
+                    </a>
+                    <a href="../profile" class="nav-icon" data-page="profile">
+                        <i class="fa fa-user"></i>
+                    </a>
+                </div>
     </div>
     <script src="/static/js/frequent.js"></script>
 </body>
-
-<script src="static/js/frequent.js"></script>
 </html>

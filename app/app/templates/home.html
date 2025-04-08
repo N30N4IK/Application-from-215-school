@@ -10,10 +10,46 @@
 <body>
     <div class="container">
         <div class="content">
-            <button class="menu-button" data-page="myapplication">Мои заявки</button>
-            <button class="menu-button" data-page="frequent-requests">Частые заявки</button>
-            <button class="menu-button" data-page="reviews">Отзывы</button>
-            <button class="menu-button" data-page="faq">Часто задаваемые вопросы</button>
+            {% if user.role == 'admin' %}
+                <button class="menu-button" onclick="window.location.href='../myapplication'">Заявки</button>
+                <button class="menu-button" onclick="window.location.href='../reviews'">Отзывы</button>
+                <button class="menu-button" onclick="window.location.href='../frequent'">Часто задаваемые вопросы</button>
+                <div class="bottom-nav">
+                    <a href="#" class="nav-icon active" data-page="home">
+                        <i class="fa fa-home"></i>
+                    </a>
+                    <a href="#" class="nav-icon" data-page="myapplication">
+                        <i class="fa fa-list"></i>
+                    </a>
+                    <a href="#" class="nav-icon" data-page="frequent">
+                        <i class="fa fa-clipboard"></i>
+                    </a>
+                    <a href="#" class="nav-icon" data-page="profile">
+                        <i class="fa fa-user"></i>
+                    </a>
+                </div>
+            {% elif user.role == 'user' %} 
+                <button class="menu-button" onclick="window.location.href='../myapplication'">Мои заявки</button>
+                <button class="menu-button" onclick="window.location.href='../frequent/requests'">Частые заявки</button>
+                <button class="menu-button" onclick="window.location.href='../reviews'">Отзывы</button>
+                <button class="menu-button" onclick="window.location.href='../frequent'">Часто задаваемые вопросы</button>
+                <div class="bottom-nav">
+                    <a href="#" class="nav-icon active" data-page="home">
+                        <i class="fa fa-home"></i>
+                    </a>
+                    <a href="#" class="nav-icon" data-page="myapplication">
+                        <i class="fa fa-list"></i>
+                    </a>
+                    <a href="#" class="nav-icon" data-page="frequent">
+                        <i class="fa fa-clipboard"></i>
+                    </a>
+                    <a href="#" class="nav-icon" data-page="profile">
+                        <i class="fa fa-user"></i>
+                    </a>
+                </div>
+            {% else %}
+                <button class="menu-button" onclick="window.location.href='../login-page'">Войдите в аккаунт<p>
+            {% endif %}
         </div>
 
         <div class="bottom-nav">
@@ -31,7 +67,6 @@
             </a>
         </div>
     </div>
-
     <script src="static/js/home_script.js"></script>
 </body>
 </html>

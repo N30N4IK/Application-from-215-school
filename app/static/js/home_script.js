@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = '/frequent';
             break;
           case 'reviews':
-            window.location.href = '/reviews';
+            window.location.href = '/reviews/create';
             break;
           case 'faq':
             window.location.href = '/frequent';

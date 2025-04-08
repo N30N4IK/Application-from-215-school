@@ -25,4 +25,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+
+
+    document.querySelectorAll('.expand-button').forEach(button => {
+        button.addEventListener('click', () =>{
+            const content = button.parentElement.nextElementSibling;
+            if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.padding = '10px 10px';
+                button.textContent = 'x';
+            } else {
+                content.style.maxHeight = '0';
+                content.style.padding = '0 10px';
+                button.textContent = '+';
+            }
+        });
+    });
 })

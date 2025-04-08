@@ -1,45 +1,38 @@
 body {
     font-family: sans-serif;
-    background-color: #fff;
     margin: 0;
-    overflow-x: hidden;
-    display: fixed;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.container {
-    width: 100%;
-    margin: 0 auto;
-    max-Width: 420px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
 }
-.header {
-    padding: 32px 20px;
-    font-size: 2em;
-    text-align: left;
-    position: relative;
+
+.container {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.button {
-    background-color: #ddd;
+
+.message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.login-button {
+    background-color: #8774E1;
     border: none;
-    color: black;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     font-size: 16px;
-    margin-bottom: 10px;
-    cursor: pointer;
     border-radius: 20px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    justify-content: center;
+    cursor: pointer;
 }
 
 .bottom-nav {
@@ -69,16 +62,21 @@ body {
 
 .nav-icon {
     color: #333;
-    font-size: 24px;
+    font-size: 30px;
     text-decoration: none;
 }
 
 .nav-icon.active {
-    color: #929BF8;
+    color: #929bf8;
 }
 
 /* Media Queries for Smaller Devices */
 @media (max-width: 480px) {
+    .menu-button {
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 15px;
+    }
 
     .nav-icon {
         font-size: 30px;
@@ -116,3 +114,4 @@ body {
         margin-bottom: 15px;
     }
 }
+

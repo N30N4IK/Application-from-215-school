@@ -1,35 +1,47 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Настройки</title>
+    <title>Settings Page</title>
     <link rel="stylesheet" href="/static/profile_settings.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <h1>Настройки</h1>
-        <a href="#" class="button">Система</a>
-        <a href="#" class="button">Уведомления</a>
-        <a href="#" class="button">Изменить логин и пароль</a>
-        <a href="#" class="button">Удалить профиль</a>
-    </div>
-
+    {% if user.role == 'user' or user.role == 'tech' %}
+        <div class="container">
+            <div class="header">Настройки</div>
+            <button class="button">Система</button>
+            <button class="button">Уведомления</button>
+            <button class="button">Изменить логин и пароль</button>
+            <button class="button">Удалить профиль</button>
+        </div>
+    {% elif user.role =='admin' %}
+        <div class="container">
+            <div class="header">Настройки</div>
+            <button class="button">Система</button>
+            <button class="button">Уведомления</button>
+            <button class="button" onclick="window.location.href='/profile/settings/add-user'"">Добавить сотрудника</button>
+            <button class="button">Изменить логин и пароль</button>
+            <button class="button">Удалить профиль</button>
+        </div>
+    {% endif %}
     <div class="bottom-nav">
         <a href="../" class="nav-icon">
-            <i class="fa fa-home"></i>
+            <i class="fas fa-home"></i>            
         </a>
         <a href="../myapplication" class="nav-icon">
-            <i class="fa fa-list"></i>
+            <i class="fas fa-list"></i>
         </a>
-        <a href="../frequnt" class="nav-icon">
-            <i class="fa fa-clipboard"></i>
+
+        <a href="../frequent" class="nav-icon">
+            <i class="fas fa-clipboard-list"></i>
         </a>
+
         <a href="../profile" class="nav-icon active">
-            <i class="fa fa-user"></i>
+            <i class="fas fa-user profile"></i>            
         </a>
     </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </body>
 </html>
 

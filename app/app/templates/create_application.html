@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="app-container">
        <div class="header">
             <h1 class="title">Заявки</h1>
         </div>
         <!-- Кнопки фильтра, создать, чаты -->
         <div class="filter-buttons">
-            <button class="filter-button">Фильтр</button>
+            <button class="filter-button" onclick="window.location.href='../myapplication/filter'">Фильтр</button>
             <button class="filter-button create-button">Создать</button>
             <button class="filter-button">Чаты</button>
         </div>
@@ -28,7 +27,7 @@
             </div>
             <div>
                 <button class="type-button">Частые заявки</button>
-                <button class="type-button type-button active-button">Другое</button>
+                <button class="type-button active-button">Другое</button>
             </div>
         </div>
 
@@ -48,42 +47,44 @@
         <div class="data">
             <h2>Данные</h2>
              <div class="data-inputs">
-                <input type="text" class="data-input" placeholder="Кабинет 3005">
-                <input type="text" class="data-input" placeholder="Первая смена">
+                <input type="number" class="data-input" placeholder="Кабинет 3005">
+                <select class="data-button">
+                    <option value="first">Первая смена</option>
+                    <option value="second">Вторая смена</option>
+                </select>
             </div>
         </div>
 
         <!-- Кнопки отмена и сохранить -->
         <div class="action-buttons">
-            <button class="cancel-button">Отмена</button>
-            <button class="save-button">Сохранить</button>
+            <button class="cancel-button" onclick="window.location.href='../myapplication'">Отмена</button>
+            <button class="save-button" onclick="window.location.href='/myapplication/create/complete'">Сохранить</button>
         </div>
 
         <nav class="bottom-nav">
             <ul class="nav-list">
                 <li>
-                    <a href="#" class="nav-icon" aria-label="Home" data-page="home">
+                    <a href="../" class="nav-icon" aria-label="Home" data-page="home">
                         <i class="fa fa-home"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-icon active" aria-label="Myapplication" data-page="myapplication">
+                    <a href="../myapplication" class="nav-icon active" aria-label="Myapplication" data-page='myapplication'>
                         <i class="fa fa-list"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-icon" aria-label="Frequent" data-page="frequent">
+                    <a href="../frequent" class="nav-icon" aria-label="Frequent" data-page="frequent">
                         <i class="fa fa-clipboard"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-icon" aria-label="Profile" data-page="profile">
+                    <a href="../profile" class="nav-icon" aria-label="Profile" data-page="profile">
                         <i class="fa fa-user"></i>
                     </a>
                 </li>
             </ul>
         </nav>
-    </div>
     <script src="/static/js/create_application.js"></script>
 </body>
 </html>
